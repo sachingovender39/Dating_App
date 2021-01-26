@@ -1,0 +1,15 @@
+<div class = "container mt-5">
+    <div style="text-align: center;">
+        <h1>Find your match</h1>
+        <p class="lead">Come on in to view your matches...all you need to do is sign up!</p>
+        <div class='text-center' *ngIf="!registerForm">
+            <button class="btn btn-success btn-large home" (click) ="toggleView()">Register</button>
+            <button class="btn btn-primary btn-large home">Learn more</button>
+        </div>
+    </div>
+
+    <div *ngIf="registerForm" style="text-align: center;">
+        <app-register-form (cancelReg)="cancelReg($event)"></app-register-form>
+    </div>
+
+</div>
